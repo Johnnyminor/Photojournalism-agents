@@ -23,8 +23,8 @@ Vibe-chatsiden understøtter ikke vedhæftninger. Brug `send_images.py` fra repo
 mens `agents serve` kører i en anden terminal:
 
 ```bash
-uv run --project foto-culler --env-file .env python send_images.py foto-culler \\
-  "/home/bruger/Pictures/RAW billeder/\"*.jpg -m \"Vinkel: ...\""
+uv run --project foto-culler --env-file .env python send_images.py foto-culler \
+  "/home/bruger/Pictures/RAW billeder/"*.jpg -m "Vinkel: ..."
 ```
 
 Modellen accepterer kun JPEG, PNG, WEBP, GIF, MPO, HEIF, AVIF, BMP og TIFF — ikke RAW (.CR2/.NEF).
