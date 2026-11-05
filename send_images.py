@@ -2,10 +2,15 @@
 
 Brug (fra repo-roden, mens `agents serve` kører for agenten):
 
-    uv run --env-file .env --project foto-culler python send_images.py foto-culler sti/til/batch/*.jpg -m "Vinkel: ..."
+    uv run --project foto-culler --env-file .env python send_images.py foto-culler \
+        "sti/til/billeder/"*.jpg -m "Vinkel: ..."
 
 Billederne sendes som data-URI'er i samme session, så agenten husker
 alt fra tidligere beskeder. Filnavnet uden endelse sendes som frame_id-reference.
+
+Bemærk: modellen accepterer kun JPEG, PNG, WEBP, GIF, MPO, HEIF, AVIF, BMP og
+TIFF — ikke RAW-filer (.CR2, .NEF osv.). Eksportér previews først, f.eks. i
+darktable: exportér til 1600 px JPEG og peg scriptet på dem.
 """
 
 from __future__ import annotations
