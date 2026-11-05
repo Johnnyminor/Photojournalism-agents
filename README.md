@@ -16,3 +16,6 @@ uv run --env-file .env agents chat          # lokal test
 uv run --env-file .env agents deploy        # managed deployment på Mistral Cloud
 uv run --env-file .env agents chat foto-editor  # chat med den deployede agent
 ```
+
+## foto-captioner
+Skriver billedtekster efter pressetik ud fra synlig information og bekræftede fakta: hvad der ses, hvem, hvornår og hvor. Uafklarte fakta markeres eksplicit — aldrig gæt. Output pr. billede: frame_id, billedtekst, credit-linje og keywords (ens across serien).
